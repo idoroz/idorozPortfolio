@@ -1,0 +1,110 @@
+
+
+.steam-container {
+  width: 100px;
+  height: 50px;
+    margin-top: 70%;
+    margin-left: -1%;
+    position: absolute;
+    z-index: 100;
+}
+
+.squiggle-container {
+  width: 7px;
+  height: 30px;
+  display: inline-block;
+}
+
+.squiggle-container-1 {
+  transform: translateY(10px);
+}
+.squiggle-container-1 .squiggle {
+  animation: move-and-fade 2.5s linear infinite;
+  animation-delay: 0.2s;
+  width: 40px;
+}
+@keyframes move-and-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+}
+.squiggle-container-2 {
+  transform: translateY(0px);
+}
+.squiggle-container-2 .squiggle {
+  animation: move-and-fade 2.5s linear infinite;
+  animation-delay: 0s;
+  width: 30px;
+}
+@keyframes move-and-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+.squiggle-container-3 {
+  
+    transform: translate(-85%,45%);
+}
+.squiggle-container-3 .squiggle {
+  animation: move-and-fade 2.5s linear infinite;
+  animation-delay: 0.4s;
+  width: 40px;
+}
+@keyframes move-and-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+}
+.squiggle {
+  stroke-dasharray: 100;
+}
+.squiggle path {
+  stroke: #5D5D5D;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+

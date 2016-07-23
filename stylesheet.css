@@ -1,0 +1,482 @@
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+
+/* Micro reset */
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+html, body { height: 100%; width: 100%; font-family: 'Architects Daughter', cursive; }
+
+body {
+  /* Without this, the body has excess horizontal scroll when the menu is open */
+  overflow-x: hidden;
+
+}
+
+
+.hide {
+    visibility: hidden;
+}
+
+.idoWrapper {
+position: relative;
+    width: 100%;
+    height: 300px;
+/* border-top: 1px solid black;
+ border-bottom: 1px solid black;*/
+display: flex;
+justify-content:center;
+    margin-top: 15%;
+background: lightblue;
+/*  background-image: url(black-paint-splats.jpg);
+  background-position: 0px 0px;
+ 
+  animation: animatedBackground 2s linear;
+
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 0px -630px; }
+}
+@-moz-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: -0px -630px; }
+}
+@-webkit-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 0px -630px; }
+
+  */
+}
+
+
+.imgWrapper {
+    display: inline-block;
+        position: relative;
+    width: 187px;
+    height: 300px;
+
+       left: -80%;
+ 
+}
+
+.imgWrapper.SlideIn {
+
+     transition        : 0.7s ease-in;
+   
+
+        left: -18%;
+ 
+
+}
+
+#idoArm.fullArm {
+    position: absolute;
+    left: -10px;
+    top: 115px;
+    
+    transform: rotate(0deg);
+    transform-origin: bottom bottom;
+    z-index: 30;
+}
+
+.torso {
+    position: absolute;
+    left: -65%;
+    top: -19%;
+    z-index: 20;
+}
+
+.headAndPocket {
+    position: absolute;
+    left: 0;
+    z-index: 0;
+}
+
+#idoBrow.eyebrow {
+  position: absolute;
+    left: 58px;
+    top: 47px;
+        transform: rotate(0deg);
+    z-index: 40;
+   
+}
+
+/****** Animations Classes *******/
+
+#idoArm.Animate{
+    transition        : .4s ease-in-out;
+
+   left: -24px;
+    top: 83px;
+   
+        transform: translate3d(0px, 0px, 0px);
+          transform: rotate(26deg);   
+}
+
+#idoBrow.Animate{
+    transition        : .4s ease-in-out;
+     left: 58px;
+    top: 47px;
+    transform: translate3d(0px, 0px, 0px);
+         transform: rotate(-15deg) ;
+}
+
+#idoArm.AnimateOut{
+    transition        : .2s ease-out;
+    transform: translate3d(0px, 0px, 0px);
+    transform : rotate(0deg);
+}
+
+#idoBrow.AnimateOut{
+    transition        : .2s ease-out;
+
+        
+         transform: rotate(0deg);
+}
+
+
+/********INFO************/
+
+.quickInfo {
+font-family: 'Architects Daughter', cursive;
+  font-weight: 500;
+  width: 100%;
+  line-height: 1;
+  text-align: center;
+    margin-top: 24px;
+}
+
+p {
+  /*position: absolute;*/
+  font-size: 2.26em;
+  text-align: center;
+ 
+}
+.description { 
+    margin-left: 0%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+
+}
+
+h1 {
+position: relative;
+font-family: 'Architects Daughter', cursive;
+  font-weight: 500;
+  font-size: 5.2em;
+  margin-left: 5%;
+  z-index: 2;
+
+      
+   
+}
+
+
+
+/********MenuButton************/
+
+/* Icon 1 */
+
+.menuBtn {
+      width: 60px;
+    height: 45px;
+    position: absolute;
+    top: -160%;
+    left: 1%;
+    z-index: 50;
+    margin: 50px auto;
+    -webkit-transform: rotate(0deg) scale(0.5);
+    -moz-transform: rotate(0deg) scale(0.5);
+    -o-transform: rotate(0deg) scale(0.5);
+    transform: rotate(0deg) scale(0.5);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.menuBtn span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .15s ease-in-out;
+  -moz-transition: .15s ease-in-out;
+  -o-transition: .15s ease-in-out;
+  transition: .15s ease-in-out;
+}
+
+
+
+/* Icon 3 */
+
+.menuBtn span:nth-child(1) {
+  top: 0px;
+}
+
+.menuBtn span:nth-child(2),.menuBtn span:nth-child(3) {
+  top: 18px;
+}
+
+.menuBtn span:nth-child(4) {
+  top: 36px;
+}
+
+.menuBtn.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.menuBtn.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menuBtn.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.menuBtn.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+
+
+
+
+
+/*****************************NAVIGATION MENU SIDEBAR**********************************/
+
+
+/* Navigation Menu - Background */
+.navigation {
+  /* critical sizing and position styles */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  
+  /* non-critical appearance styles */
+  list-style: none;
+  background: white;
+}
+
+/* Navigation Menu - List items */
+.nav-item {
+  /* non-critical appearance styles */
+  width: 300px;
+/*  border-top: 1px solid black;*/
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.nav-item a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: 0.2em;
+  background: white;
+  color: black;
+  font-size: 3.4em;
+  line-height: 4.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+  text-align: center;
+}
+
+.nav-item a:hover {
+  color: black;
+ /* background: linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,98,139,0.65) 100%)*/; 
+}
+
+/* Site Wrapper - Everything that isn't navigation */
+.site-wrap {
+  /* Critical position and size styles */
+  min-height: 100%;
+  min-width: 100%;
+  background-color: lightblue; /* Needs a background or else the nav will show through */
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+
+  
+}
+
+/* Nav Trigger */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: fixed;
+  left: 15px; top: 15px;
+  z-index: 2;
+  
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  /*background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  */background-size: contain;
+}
+
+/* Make the Magic Happen */
+.nav-trigger + label, .site-wrap {
+  transition: left 0.5s;
+  position: absolute;
+}
+
+.nav-trigger:checked + label {
+  left: 315px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+  left: 300px;
+
+}
+
+
+
+
+/*****STEAM SVG FIX*************/
+
+svg#Layer_1 {
+width: 20%;
+    height: 20%;
+    }
+
+/*****//***STEAM SVG FIX-end*************/
+
+.panel {
+  font-size: 3.2em;
+}
+
+
+
+#infoBCG {
+  width: 0px;
+  height: 0px;
+  background: white; 
+  border: 2px solid lightblue;
+  position: absolute;
+  /*right: 20%;*/
+  left: 34.5%;
+  margin-top: 24px;
+   z-index: 0;
+  overflow:hidden;
+  -webkit-transition: width 800ms ease-in-out, height 800ms ease-in-out;
+  -moz-transition: width 800ms ease-in-out, height 800ms ease-in-out;
+  -o-transition: width 800ms ease-in-out, height 800ms ease-in-out;
+  transition: width 800ms ease-in-out, height 800ms ease-in-out;
+ 
+}
+
+#infoBCG.enlarging {
+   
+  height: 250px;
+  width: 880px;
+
+}
+
+
+.portNav{
+  height: 300px;
+  font-size: 1em;
+  color: black;
+}
+h1.portfolioHeader {
+  position: absolute;
+    top: 0;
+    margin-left: 1%;
+
+}
+
+.wrapper {
+      /*centering with spaces on sides*/
+      width: 90%;
+    margin-left: 5%;
+    /*margin-top: 5%;*/
+    /*centering with spaces on sides*/
+         margin-top: 0px;
+    height: 870px;
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+
+}
+
+.menuwrapper ul {
+    padding: 0;
+  margin: 0;
+  list-style: none;
+      width: 90%;
+    margin-left: 5%;
+        height:795px;
+        margin-top: -100px;
+            /*background: lightgrey;*/
+}
+.flex-container {
+    width: 100%;
+    margin-top: -100px;
+    display: flex;
+
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+}
+
+.flex-item {
+  width: 31%;
+  height: 245px;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 5em;
+  text-align: center;
+   margin: 1%;
+  overflow: hidden;
+  box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.71);
+}
+
+.optionLabel {
+  color: black;
+  font-size: 0.6em;
+  height: inherit;
+  line-height: 13;
+
+background: url() no-repeat;
+   -webkit-transition: all 0.5s ease-out;
+          transition: all 0.5s ease-out;
+}
+
+.optionLabel:hover {
+  line-height: 1;
+  cursor: pointer;
+}
